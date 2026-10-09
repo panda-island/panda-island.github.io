@@ -1,0 +1,28 @@
+name: 歌詞島使用支援
+description: 回報問題、提出建議或詢問資料處理方式
+title: '[歌詞島] '
+body:
+  - type: markdown
+    attributes:
+      value: '這是公開回報。請勿填入密碼、Spotify 權杖或個人敏感資料。'
+  - type: input
+    id: version
+    attributes:
+      label: App 與 iOS 版本
+      placeholder: 例如：歌詞島 1.0、iOS 17.6
+  - type: input
+    id: device
+    attributes:
+      label: iPhone 機型
+  - type: dropdown
+    id: source
+    attributes:
+      label: 音樂來源
+      options: [Apple Music, Spotify, 示範, 其他問題]
+  - type: textarea
+    id: description
+    attributes:
+      label: 問題或建議
+      description: 請說明操作步驟、預期結果及實際結果。隱私問題請勿附上敏感內容。
+    validations:
+      required: true

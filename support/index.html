@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>使用支援｜歌詞島</title><meta name="description" content="歌詞島設定步驟、Spotify 連線、Apple Music 同步、LRC 匯入及問題回報。"><meta name="theme-color" content="#13201f"><link rel="canonical" href="https://panda-island.github.io/support/"><link rel="icon" href="../assets/icon.png"><link rel="stylesheet" href="../assets/style.css"></head><body>
+<a class="skip" href="#main">跳至主要內容</a><header class="header wrap"><a class="brand" href="../"><img src="../assets/icon.png" alt="" width="38" height="38">歌詞島</a><nav aria-label="主選單"><a href="../">首頁</a><a href="./" aria-current="page">支援</a><a href="../privacy/">隱私權</a></nav></header>
+<main id="main" class="document wrap"><p class="eyebrow">WE'RE HERE TO HELP</p><h1>使用支援</h1><p class="lead">從連接音樂，到找到剛剛好的歌詞時間。</p>
+<section class="contact" id="contact"><h2>聯絡歌詞島</h2><p>開發與維護：<strong>panda-island</strong>。你可以透過公開的 GitHub 問題回報頁提出使用問題、錯誤回報或功能建議；需要 GitHub 帳號。</p><a class="button" href="https://github.com/panda-island/panda-island.github.io/issues/new?template=app-support.yml">提交問題回報 ↗</a><p class="small">回報內容會公開。請只提供 App 版本、iOS 版本、機型與操作步驟，不要填入密碼、授權權杖或私人歌詞檔案。</p></section>
+<section><h2>Apple Music 設定</h2><ol><li>先在 iPhone 的 Music App 播放歌曲。</li><li>開啟歌詞島，選擇 <strong>Apple Music</strong> 並點「開始同步」。</li><li>依提示允許「媒體與 Apple Music」存取。</li><li>若沒有歌曲資訊，確認 Music App 正在播放；部分雲端或非資料庫歌曲可能無法提供資訊。</li></ol></section>
+<section><h2>Spotify 設定</h2><p>目前版本使用你自己的 Spotify Developer Client ID 連接帳號。</p><ol><li>在 <a href="https://developer.spotify.com/dashboard">Spotify Developer Dashboard</a> 建立 App，登記 Redirect URI：<code>lyrics-island://spotify-callback</code>。</li><li>開啟歌詞島設定，填入該 App 的 <strong>Client ID</strong>，點「連接 Spotify」。不要填 Client Secret。</li><li>完成 Spotify 授權。開發模式需符合 Spotify 的帳號及允許使用者規則。</li><li>在 Spotify 播放音樂，再回到歌詞島選擇 Spotify 並開始同步。</li></ol></section>
+<section><h2>常見問題</h2>
+<details><summary>為什麼離開 App 後歌詞停止更新？</summary><p>目前版本在歌詞島的前景讀取播放資訊。音樂在其他 App 播放，並不會讓歌詞島取得持續背景執行時間；因此離開前景會顯示「同步暫停」，回到 App 即可恢復。</p></details>
+<details><summary>動態島可以一直跑馬燈嗎？</summary><p>目前動態島以逐句切換顯示歌詞。iOS 控制即時動態的更新及動畫，無法可靠提供持續的自訂跑馬燈。連續跑馬燈位於歌詞島 App 內。</p></details>
+<details><summary>找不到歌詞或版本不對，怎麼辦？</summary><p>LRCLIB 不一定有對應歌曲版本的時間軸歌詞。請在該曲播放時，匯入你有權使用的 UTF-8 LRC 檔案；檔案須包含如 <code>[00:12.50]</code> 的時間標記。你也可以使用「重試歌詞」重新搜尋。</p></details>
+<details><summary>歌詞比音樂早或晚出現？</summary><p>使用歌詞延遲滑桿。歌詞太早時增加正值；歌詞太晚時使用負值。範圍為 −10 至 +10 秒，每 0.1 秒一步，設定依歌曲保存。</p></details>
+<details><summary>沒有動態島，仍然能使用嗎？</summary><p>可以。歌詞島需要 iOS 17 或以上；動態島只會出現在支援它的 iPhone。其他機型可使用 App 內歌詞與鎖定畫面即時動態。也請確認 iOS 允許歌詞島顯示即時動態。</p></details>
+<details><summary>Spotify 讀取失敗或顯示請求過於頻繁？</summary><p>請確認 Client ID、Redirect URI、授權與開發模式允許使用者設定。若顯示等待秒數，等待後再開始同步；必要時重新登入。播客、廣告及沒有歌曲資料的播放項目不會提供歌曲歌詞。</p></details>
+<details><summary>如何中止授權或移除本機資料？</summary><p>在歌詞島設定中登出 Spotify，可刪除本機 Spotify 權杖；也可在 Spotify 帳號的應用程式設定撤銷存取。Apple Music 權限可在 iOS 隱私設定中撤銷。刪除 App 會移除其本機設定與匯入的 LRC；鑰匙圈權杖可能保留，建議先登出再刪除。</p></details>
+<details><summary>目前可以從 App Store 下載嗎？</summary><p>歌詞島目前尚未在 App Store 上架。此網站提供產品介紹、使用支援與隱私權政策；正式上架後會更新下載資訊。</p></details>
+</section><section><h2>資料與隱私</h2><p>了解音樂資訊、歌詞查詢及本機儲存如何處理，請參閱<a href="../privacy/">隱私權政策</a>。</p></section></main>
+<footer class="footer wrap"><span>© 2026 panda-island · 歌詞島</span><div><a href="../">首頁</a><a href="../privacy/">隱私權政策</a></div></footer></body></html>
