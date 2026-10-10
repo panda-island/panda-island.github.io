@@ -6,8 +6,8 @@
 <section><h2>Apple Music 設定</h2><ol><li>先在 iPhone 的 Music App 播放歌曲。</li><li>開啟歌詞島，選擇 <strong>Apple Music</strong> 並點「開始同步」。</li><li>依提示允許「媒體與 Apple Music」存取。</li><li>若沒有歌曲資訊，確認 Music App 正在播放；部分雲端或非資料庫歌曲可能無法提供資訊。</li></ol></section>
 <section><h2>Spotify 設定</h2><p>目前版本使用你自己的 Spotify Developer Client ID 連接帳號。</p><ol><li>在 <a href="https://developer.spotify.com/dashboard">Spotify Developer Dashboard</a> 建立 App，登記 Redirect URI：<code>lyrics-island://spotify-callback</code>。</li><li>開啟歌詞島設定，填入該 App 的 <strong>Client ID</strong>，點「連接 Spotify」。不要填 Client Secret。</li><li>完成 Spotify 授權。開發模式需符合 Spotify 的帳號及允許使用者規則。</li><li>在 Spotify 播放音樂，再回到歌詞島選擇 Spotify 並開始同步。</li></ol></section>
 <section><h2>常見問題</h2>
-<details><summary>為什麼離開 App 後歌詞停止更新？</summary><p>iOS 26 可選系統背景會話，以真實播放校正回報進度，系統可提前結束或由使用者取消；進度介面也可能影響動態島排列。舊 PiP 方式保留，但可能遮住動態島。若 PiP 未啟用或中斷，App 主要在前景讀取播放資訊。音樂在其他 App 播放，並不會讓歌詞島取得持續背景執行時間；離開前景後只利用系統允許的短暫時間完成更新，時間結束會顯示「同步暫停」，回到 App 即可恢復。本版不使用無聲音訊維持背景，無法保證長時間持續同步。</p></details>
-<details><summary>動態島可以一直跑馬燈嗎？</summary><p>目前動態島以逐句切換顯示歌詞。iOS 控制即時動態的更新及動畫，無法可靠提供持續的自訂跑馬燈。連續跑馬燈位於歌詞島 App 內。</p></details>
+<details><summary>為什麼離開 App 後歌詞停止更新？</summary><p>iOS 26 可選系統背景會話，以真實播放校正回報進度，系統可提前結束或由使用者取消；進度介面也可能影響動態島排列。PiP 功能已於 1.0.8 移除。若背景會話未啟用或中斷，App 主要在前景讀取播放資訊。音樂在其他 App 播放，並不會讓歌詞島取得持續背景執行時間；離開前景後只利用系統允許的短暫時間完成更新，時間結束會顯示「同步暫停」，回到 App 即可恢復。本版不使用無聲音訊維持背景，無法保證長時間持續同步。</p></details>
+<details><summary>歌詞如何更新？</summary><p>App 與動態島均逐句直接替換文字，跑馬燈已移除。一般收合布局使用左右兩側，多活動小型布局顯示整句；實際位置與寬度由 iOS 決定。</p></details>
 <details><summary>找不到歌詞或版本不對，怎麼辦？</summary><p>App 會查詢 LRCLIB，必要時備援網易雲音樂、QQ 音樂、酷狗音樂及 AMLL 社群歌詞庫。各來源不一定有對應版本的時間軸歌詞，也可能暫時無法使用。請在該曲播放時，匯入你有權使用的 UTF-8 LRC 檔案；檔案須包含如 <code>[00:12.50]</code> 的時間標記。你也可以使用「重試歌詞」重新搜尋。</p></details>
 <details><summary>歌詞比音樂早或晚出現？</summary><p>使用歌詞延遲滑桿。歌詞太早時增加正值；歌詞太晚時使用負值。範圍為 −10 至 +10 秒，每 0.1 秒一步，設定依歌曲保存。</p></details>
 <details><summary>沒有動態島，仍然能使用嗎？</summary><p>可以。歌詞島需要 iOS 17 或以上；動態島只會出現在支援它的 iPhone。其他機型可使用 App 內歌詞與鎖定畫面即時動態。也請確認 iOS 允許歌詞島顯示即時動態。</p></details>
