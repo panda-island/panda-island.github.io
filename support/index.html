@@ -6,7 +6,7 @@
 <section><h2>Apple Music 設定</h2><ol><li>先在 iPhone 的 Music App 播放歌曲。</li><li>開啟歌詞島，選擇 <strong>Apple Music</strong> 並點「開始同步」。</li><li>依提示允許「媒體與 Apple Music」存取。</li><li>若沒有歌曲資訊，確認 Music App 正在播放；部分雲端或非資料庫歌曲可能無法提供資訊。</li></ol></section>
 
 <section><h2>常見問題</h2>
-<details><summary>為什麼離開 App 後歌詞停止更新？</summary><p>預設無聲音訊播放全零音訊並與 Apple Music 混音，嘗試維持背景。來電、路由變更或系統策略可能中斷，請查看狀態並重試。iOS 26 的系統背景會話保留作為備用。兩者皆不保證永久執行；PiP 已移除。</p></details>
+<details><summary>為什麼離開 App 後歌詞停止更新？</summary><p>iOS 26 建議使用系統背景會話。無聲音訊已改為即時零音訊引擎，仍僅為實驗，無法保證長時間執行。來電、路由變更或系統策略可能中斷，請查看狀態並重試。回到 App 時若顯示背景更新中斷摘要，可將訊息與 iOS 版本、鎖屏或來電情況一同回報。兩者皆不保證永久執行；PiP 已移除。</p></details>
 <details><summary>歌詞如何更新？</summary><p>App 歌詞會換行並高亮、捲動至目前句子。動態島長句捲動為實驗選項，由每秒更新配合短動畫實現；iOS 可能節流，常亮或減少動態時停用。一般收合使用左右兩側，多活動小型布局顯示整句，實際位置由 iOS 決定。</p></details>
 <details><summary>找不到歌詞或版本不對，怎麼辦？</summary><p>App 會查詢 LRCLIB，必要時備援網易雲音樂、QQ 音樂、酷狗音樂及 AMLL 社群歌詞庫。各來源不一定有對應版本的時間軸歌詞，也可能暫時無法使用。請在該曲播放時，匯入你有權使用的 UTF-8 LRC 檔案；檔案須包含如 <code>[00:12.50]</code> 的時間標記。你也可以使用「重試歌詞」重新搜尋。</p></details>
 <details><summary>歌詞比音樂早或晚出現？</summary><p>使用歌詞延遲滑桿。歌詞太早時增加正值；歌詞太晚時使用負值。範圍為 −10 至 +10 秒，每 0.1 秒一步，設定依歌曲保存。</p></details>
