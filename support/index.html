@@ -6,7 +6,7 @@
 <section><h2>Apple Music 設定</h2><ol><li>先在 iPhone 的 Music App 播放歌曲。</li><li>開啟歌詞島，選擇 <strong>Apple Music</strong> 並點「開始同步」。</li><li>依提示允許「媒體與 Apple Music」存取。</li><li>若沒有歌曲資訊，確認 Music App 正在播放；部分雲端或非資料庫歌曲可能無法提供資訊。</li></ol></section>
 
 <section><h2>常見問題</h2>
-<details><summary>為什麼離開 App 後歌詞停止更新？</summary><p>iOS 26 建議使用系統背景會話。無聲音訊已改為即時零音訊引擎，仍僅為實驗，無法保證長時間執行。來電、路由變更或系統策略可能中斷，請查看狀態並重試。回到 App 時若顯示背景更新中斷摘要，可將訊息與 iOS 版本、鎖屏或來電情況一同回報。兩者皆不保證永久執行；PiP 已移除。</p></details>
+<details><summary>為什麼離開 App 後歌詞停止更新？</summary><p>歌詞島播放器預設使用音樂播放背景；暫停後可能停止歌詞更新。外部 Music App 同步在 iOS 26 可選系統背景會話。無聲音訊已改為即時零音訊引擎，仍僅為實驗，無法保證長時間執行。來電、路由變更或系統策略可能中斷，請查看狀態並重試。回到 App 時若顯示背景更新中斷摘要，可將訊息與 iOS 版本、鎖屏或來電情況一同回報。兩者皆不保證永久執行；PiP 已移除。</p></details>
 <details><summary>歌詞如何更新？</summary><p>App 歌詞會換行並高亮、捲動至目前句子。動態島長句捲動為實驗選項，由每秒更新配合短動畫實現；iOS 可能節流，常亮或減少動態時停用。一般收合使用左右兩側，多活動小型布局顯示整句，實際位置由 iOS 決定。</p></details>
 <details><summary>找不到歌詞或版本不對，怎麼辦？</summary><p>App 會查詢 LRCLIB，必要時備援網易雲音樂、QQ 音樂、酷狗音樂及 AMLL 社群歌詞庫。各來源不一定有對應版本的時間軸歌詞，也可能暫時無法使用。請在該曲播放時，匯入你有權使用的 UTF-8 LRC 檔案；檔案須包含如 <code>[00:12.50]</code> 的時間標記。你也可以使用「重試歌詞」重新搜尋。</p></details>
 <details><summary>歌詞比音樂早或晚出現？</summary><p>使用歌詞延遲滑桿。歌詞太早時增加正值；歌詞太晚時使用負值。範圍為 −10 至 +10 秒，每 0.1 秒一步，設定依歌曲保存。</p></details>
@@ -14,5 +14,5 @@
 
 <details><summary>如何中止授權或移除本機資料？</summary><p>Apple Music 權限可在 iOS 隱私設定中撤銷。刪除 App 會移除其本機設定與匯入 LRC。升級 1.0.9 會清除可存取的舊 Spotify 權杖與 Client ID；服務端授權可自行在 Spotify 帳號管理中撤銷。</p></details>
 <details><summary>目前可以從 App Store 下載嗎？</summary><p>歌詞島目前尚未在 App Store 上架。此網站提供產品介紹、使用支援與隱私權政策；正式上架後會更新下載資訊。</p></details>
-</section><section><h2>資料與隱私</h2><p>了解音樂資訊、歌詞查詢及本機儲存如何處理，請參閱<a href="../privacy/">隱私權政策</a>。</p></section></main>
+</section><section><h2>資料與隱私</h2><p>了解音樂資訊、歌詞查詢及本機儲存如何處理，請參閱<a href="../privacy/">隱私權政策</a>。</p></section><section><h2>歌詞島播放器設定</h2><p>選歌詞島播放器 → 搜尋／選擇音樂 → 點選歌曲播放。清單會成為播放佇列，支援拖曳進度、播放／暫停、上一首／下一首。</p><p>完整串流需有效 Apple Music 訂閱，App ID 須在 Apple Developer 的 App Services 啟用 MusicKit。請使用對應 App ID 簽署；服務未啟用時，搜尋或播放可能失敗。</p></section></main>
 <footer class="footer wrap"><span>© 2026 panda-island · 歌詞島</span><div><a href="../">首頁</a><a href="../privacy/">隱私權政策</a></div></footer></body></html>
